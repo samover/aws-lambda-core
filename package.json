@@ -1,0 +1,11 @@
+{
+  "name": "aws-lambda-helper",
+  "version": "0.0.1",
+  "description": "Easy bootstrapping for AWS lambdas",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Samuel Overloop <samover@protonmail.com>",
+  "license": "MIT"
+}
