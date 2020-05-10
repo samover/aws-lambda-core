@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { ResponseBody } from '../../../src';
 
 import { Request } from '../../Request';
-import { ErrorHandler } from '../interfaces/errorHandler.interface';
+import { ErrorHandler } from '../interfaces';
 
 export const UseErrorHandler = (errorHandler: ErrorHandler): MethodDecorator => (
     target, key, descriptor: PropertyDescriptor,
