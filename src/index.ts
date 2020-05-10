@@ -22,6 +22,7 @@ export {
     ValidateBody,
     RequestValidation,
     RequestValidationOptions,
+    UseErrorHandler,
 } from './common/decorators';
 export { ContentType, RequestMethod } from './common/enums';
 export { ErrorHandler } from './common/interfaces';
