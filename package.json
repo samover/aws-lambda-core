@@ -1,17 +1,17 @@
 {
   "name": "aws-lambda-core",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Core components for bootstrapping AWS lambda functions",
-  "main": "dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "/dist"
+    "/lib"
   ],
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "eslint --fix ./src/**/*.ts",
-    "bundle": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf lib && tsc"
   },
   "author": "Samuel Overloop <samover@protonmail.com>",
   "license": "MIT",
@@ -52,11 +52,6 @@
     "faker": "^4.1.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.3.0",
-    "ts-loader": "^6.2.2",
-    "tsd-webpack-plugin": "^1.0.4",
-    "typescript": "^3.7.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.11",
-    "webpack-node-externals": "^1.7.2"
+    "typescript": "^3.7.4"
   }
 }
