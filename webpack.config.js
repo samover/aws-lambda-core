@@ -1,4 +1,5 @@
 const nodeExternals = require('webpack-node-externals');
+var TypescriptDeclarationGenerator = require('tsd-webpack-plugin');
 
 module.exports = {
   entry: ['./src/index.ts'],
@@ -15,18 +16,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ejs$/,
-        exclude: /node_modules/,
-      },
-      {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        loader: 'ts-loader',
       },
-      {
-        test: /\.ejs$/,
-        exclude: /node_modules/,
-      }
     ]
   },
+  plugins: [
+    new TypescriptDeclarationGenerator({
+      moduleName:'aws-lambda-core',
+      out:'./dist/index.d.ts',
+    })
+  ]
 };
